@@ -16,8 +16,8 @@ FROM alpine:latest
 
 RUN apk --update add ca-certificates
 
-COPY --from=builder /go/src/github.com/micromdm/micromdm/build/linux/micromdm /usr/bin/
-COPY --from=builder /go/src/github.com/micromdm/micromdm/build/linux/mdmctl /usr/bin/
+COPY --from=builder /go/src/github.com/diginize/micromdm/build/linux/micromdm /usr/bin/
+COPY --from=builder /go/src/github.com/diginize/micromdm/build/linux/mdmctl /usr/bin/
 
 EXPOSE 80 443
 VOLUME ["/var/db/micromdm"]
